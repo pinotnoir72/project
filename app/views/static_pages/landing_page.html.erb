@@ -1,9 +1,37 @@
-<h2>Featured Bike:</h2>
 
-<div class="fname"><p style="font-family:arial;color:blue;font-weight:900;font-size:16px">Name:</p><%= @featured_product.name %></div>
 
-<div class="fimage"><%= image_tag(@featured_product.image_url, width: 200) %></div>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-<div class="fprice"><p style="font-family:arial;color:blue;font-weight:900;font-size:16px">Price:</p><%= @featured_product.price %></div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% @products.each do |product| %>
+    <div class="item<%= " active" if product == @products.first %>">
+      <%= image_tag(product.image_url, class: "img-responsive")  %>
+      <div class="carousel-caption">
+        <%= product.name %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
 
 
