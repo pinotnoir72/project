@@ -15,7 +15,7 @@ resources :orders, only: [:index, :show, :create, :destroy]
 
   # You can have the root of your site routed with "root"
        #root 'static_pages#index'
-      root 'static_pages#landing_page'
+      root 'static_pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
