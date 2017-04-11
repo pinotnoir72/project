@@ -49,3 +49,5 @@ group :development do
   gem 'spring'
 end
 
+# Use Devise
+gem 'devise'
