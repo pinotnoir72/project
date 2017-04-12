@@ -49,5 +49,8 @@ group :development do
   gem 'spring'
 end
 
-# Use Devise
+# Use Devise , Authentication
 gem 'devise'
+
+#Use CanCan, Authorization
+gem 'cancancan', '~> 1.10'
