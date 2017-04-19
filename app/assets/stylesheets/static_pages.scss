@@ -13,16 +13,22 @@ h2,h3 {
   color:black;
 }
 
-.image-landing {
-  margin-left:700px;
-  margin-top:70px;
-}
 
 .carousel-caption {
-  margin-bottom:190px;
+  margin-bottom: 3%;
 }
 
 .btn btn-default {
   color:blue;
 }
+
+iv.c-wrapper { width:80%; 
+margin: auto; 
+} 
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 60%; 
+margin: auto; 
+}
+
+
 

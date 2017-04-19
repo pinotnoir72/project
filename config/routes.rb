@@ -12,6 +12,12 @@ Rails.application.routes.draw do
 
 resources :orders, only: [:index, :show, :create, :destroy]
 
+#nested resource for comments
+resources :products do
+  resources :comments
+end
+resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
