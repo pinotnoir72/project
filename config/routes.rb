@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :users
   resources :products
-    
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -13,15 +12,14 @@ Rails.application.routes.draw do
   
   post 'static_pages/thank_you'
 
-  resources :orders, only: [:index, :show, :create, :destroy]
+resources :orders, only: [:index, :show, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
        #root 'static_pages#index'
-       
-  root 'static_pages#index'
+      root 'static_pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -72,4 +70,3 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
-      
