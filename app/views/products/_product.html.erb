@@ -1,6 +1,5 @@
-
-<div class="col-xs-6 col-md-3">
-     <% @products.each do |product| %>
+<div class="col-xs-6 col-md-4">
+   
   <div class="panel panel-primary">
      <div class="panel-heading">BLACK FRIDAY DEAL</div>
      <div class="panel-body"><%= image_tag(product.image_url, class: "img-responsive") %></div>
@@ -17,7 +16,5 @@
        </div><!--end links-->
      </div><!--end panel-body--> 
   </div><!--end panel panel-primary-->   
-
-  <%end%>
 
 </div><!--end column-->
