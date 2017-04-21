@@ -3,5 +3,5 @@ class Product < ActiveRecord::Base
 end
 
 def self.search(search_term)
-  Product.where("name LIKE ?", "%#{search_term}%")
+  @products = Product.search(search_term)
 end
