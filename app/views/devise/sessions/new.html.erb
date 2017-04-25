@@ -4,66 +4,34 @@
 <div class="container">
   <div class="row"
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> authentication
 <form class="form-horizontal">
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<<<<<<< HEAD
-    <%= f.label :email %><br />
-    <%= f.email_field :email,class: 'form-control', autofocus: true %>
-=======
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, class:"form-control" %>
->>>>>>> authentication
     </div>
   </div>
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-<<<<<<< HEAD
-    <%= f.label :password %><br />
-    <%= f.password_field :password,class: 'form-control', autocomplete: "off" %>
-=======
       <%= f.label :password %><br />
       <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
->>>>>>> authentication
     </div>
   </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-<<<<<<< HEAD
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-=======
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me %>
->>>>>>> authentication
       </div>
     </div>
   <% end -%>
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-<<<<<<< HEAD
-    <%= f.submit "Log in", class: "btn btn-primary" %>
-    </div>
-  </div>
- 
-<% end %>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-    <%= render "devise/shared/links" %>
-    </div>
-
-</form>
-=======
       <%= f.submit "Log in",class:"btn btn-primary btn-lg"%>
     </div>
   </div>
@@ -74,7 +42,6 @@
     </div>
 
 
->>>>>>> authentication
  </div>
 </div>
  
