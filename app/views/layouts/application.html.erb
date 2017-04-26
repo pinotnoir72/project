@@ -42,18 +42,17 @@
     <ul class="nav pull-right">
       <li>
         <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-    <% else %>
-        <%= link_to('Login', new_user_session_path,class:"glyphicon glyphicon-log-in") %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path,class:"glyphicon glyphicon-log-in") %>
+            <li><%= link_to('Sign-In',new_user_registration_path,class:"glyphicon glyphicon-user") %></li>
         <% end %>
-      </li>
-      <li><%= link_to('Sign-In',new_user_registration_path,class:"glyphicon glyphicon-user") %></li> 
     </ul>
 
  </nav>
 
       <% if notice %>
-       <div class="alert alert-info"><%= notice %></div>
+         <div class="alert alert-info"><%= notice %></div>
       <% end %>
       
       <% if alert %>
