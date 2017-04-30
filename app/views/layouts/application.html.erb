@@ -27,8 +27,9 @@
       <li class="active"><a 
 
 <%= link_to "Home", static_pages_landing_page_path %></li>
-      <li><%= link_to "About", static_pages_about_path %>></li>
+      <li><%= link_to "About", static_pages_about_path %></li>
       <li><%= link_to "Contact", static_pages_contact_path %></li>
+      <li><%= link_to("Products", products_path) %></li>
     </ul>
 <!-- start search form-->    
     <form class="navbar-form navbar-left">
@@ -37,21 +38,44 @@
         <%= text_field_tag(:q, "Search",class: "form-control") %>
         <%= submit_tag("Submit",  class: "btn btn-default btn-primary btn-md") %>
          <% end %>
+<<<<<<< HEAD
            
    
    
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon 
+=======
+        
+    <ul class="nav pull-right">
+      <li>
+        <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path,class:"glyphicon glyphicon-log-in") %>
+            <li><%= link_to('Sign-In',new_user_registration_path,class:"glyphicon glyphicon-user") %></li>
+        <% end %>
+    </ul>
+>>>>>>> master
 
-glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon 
+ </nav>
 
+<<<<<<< HEAD
 glyphicon-log-in"></span> Login</a></li>
     </ul>
 
   </div>
 </nav>
+=======
+      <% if notice %>
+         <div class="alert alert-info"><%= notice %></div>
+      <% end %>
+      
+      <% if alert %>
+       <div class="alert alert-warning"><%= alert %></div>
+      <% end %>
+>>>>>>> master
 
+ 
 <%= yield %>
 
 <footer>

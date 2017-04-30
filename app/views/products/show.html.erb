@@ -1,25 +1,37 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice%></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container">
+  
+  <div class="name">
+    <%= @product.name %>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="image">
+    <%= image_tag(@product.image_url, width: 400) %>
+  </div>
+  
+  <div class="describe">
+    <div class="description">
+      <strong>Description:</strong>
+        <%= @product.description %>
+    </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_url, width: 400) %>
-</p>
+   <div class="color">
+     <strong>Colour:</strong>
+      <%= @product.colour %>
+    </div>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+    <div class="pricee">
+      <strong>Price:</strong>
+        <%= @product.price %>
+    </div>
+  </div>
+  <br>
+  
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
 
+<<<<<<< HEAD
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
@@ -31,3 +43,6 @@
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
+=======
+</div><!--end container-->
+>>>>>>> master
