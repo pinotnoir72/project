@@ -21,28 +21,19 @@
       <%= @product.colour %>
     </div>
 
-    <div class="pricee">
+    <div class="price">
       <strong>Price:</strong>
         <%= @product.price %>
     </div>
-  </div>
+    
+    <div class="comments">
+      <strong>Average Rating:</strong>
+      <%= @product.highest_rating_comment %>
+    </div>
+  </div><!--end describe-->
   <br>
   
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
 
-<<<<<<< HEAD
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
-
-=======
 </div><!--end container-->
->>>>>>> master
