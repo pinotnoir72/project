@@ -25,7 +25,12 @@
       <strong>Price:</strong>
         <%= @product.price %>
     </div>
-  </div>
+  </div><!--end describe-->
+      <p>
+        <%= render partial: "new_comment" %>
+      </p>
+
+   <%= render partial: "comments" %>
   <br>
   
   <%= link_to 'Edit', edit_product_path(@product) %> |
