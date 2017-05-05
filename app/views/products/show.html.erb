@@ -41,7 +41,9 @@
       <p>
         <%= render 'new_comments' %>
       </p>
-      
+     <div class="page-numbers col-sm-12">
+        <%= paginate @comments %>
+      </div> 
     </div>
   </div>
 

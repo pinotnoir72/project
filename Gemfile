@@ -54,3 +54,9 @@ gem 'devise'
 
 #Use CanCan, Authorization
 gem 'cancancan', '~> 1.10'
+
+#Use pagination
+gem 'will_paginate'
+
+#will_paginate for bootstrap
+gem 'bootstrap-will_paginate', '0.0.10'
