@@ -1,0 +1,13 @@
+.description {
+    float:right;
+    margin-bottom:65px;
+}
+
+.name {
+    float:left;
+}
+
+.image {
+    float:left;
+    margin-right:350px;
+}
