@@ -10,6 +10,13 @@ class Comment < ActiveRecord::Base
   
   scope :rating_desc, -> { order(rating: :desc) }
 	scope :rating_asc, -> { order(rating: :asc) }
+	
+def destroy
+  @comment = Comment.find(params[:id])
+  product = @comment.product
+  @comment.destroy
+  redirect_to product
+end	
 
 def create
     @product = Product.find(params[:product_id])
