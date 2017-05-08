@@ -2,26 +2,24 @@
 
 <div class="container">
   <div class="row">
-    
-      <div class="name">
-        <%= @product.name %>
-      </div>
-    </div><!--end col-->
-    
-    
+    <div class="col-md-12 col-md-offset-0">
+      
       <div class="image">
-        <%= image_tag(@product.image_url, width: 400) %>
-          <p><%= link_to 'Edit', edit_product_path(@product) %> |
-        <%= link_to 'Back', products_path %></p>
-      </div>
+        <div class="name">
+          <h3><%= @product.name %></h3>
+            <%= image_tag(@product.image_url, width: 400) %>
+              <p><%= link_to 'Edit', edit_product_path(@product) %> |
+              
+                 <%= link_to 'Back', products_path %></p>
+                 
+        </div><!--end name-->             
+      </div><!--end image-->
+        
     
-    
-    
-      <div class="description"> 
-        <div class="describe">
-          <strong>Description:</strong>
-            <%= @product.description %>
-        </div><!--end describe-->      
+      <div class="describe">
+        <strong>Description:</strong>
+          <%= @product.description %>
+      </div><!--end describe-->      
     
     
       <div class="color">
@@ -35,26 +33,22 @@
           <%= @product.price %>
       </div>
     
-        <br>
-        
+       <br>
+       
+    
     <div class="rated" data-score="<%= @product.average_rating %>"> 
       <p>Average Rating:</p>
     </div> 
+     
     
-    <div class="col-md-6 rate-product">
-      <p>
+     
         <%= render 'new_comments' %>
-      </p>
-    </div>
-  </div><!--end description-->
-    
-    <div class="col-md-6 rate-product">
-      <p>
+     
+  
+  
+    </div><!--end row--> 
+</div><!--end container-->   
+   
+     
         <%= render 'comments' %>
-      </p>
-    </div>
- 
-  </div><!--end row--> 
-</div><!--end container-->
-
- <%= will_paginate @comments %>
+     <%= will_paginate @comments %>

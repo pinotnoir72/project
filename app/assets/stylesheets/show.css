@@ -1,15 +1,14 @@
 .description {
-    float:right;
-    position: relative;
+   margin-right:150px;
 }
 
 .name {
-    float:left;
-    font-size:2em;
+   margin-right:100px;
 }
 
 .image {
     float:left;
-    margin-right:320px;
-   
+    margin-right:350px;
 }
+
+
