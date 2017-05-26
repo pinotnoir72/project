@@ -1,36 +1,16 @@
 <%= params[:example_key] %>
 <%= params[:example_key].to_i * 10 %>
 
-<<<<<<< HEAD
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <% @products.each do |product| %>
-    <div class="item<%= " active" if product == @products.first %>">
-      
-      <%= image_tag(product.image_url, class: "img-responsive")  %>
-      <div class="carousel-caption">
-        <h2><%= product.name %></h2>
-        <h3><%= product.price %></h3>
-       
-     </div>
-=======
 <div class="container">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-
+   
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% @products.each do |product| %>
+       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  </ol>
+    <% end %>
+    
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <% @products.each do |product| %>
@@ -42,7 +22,6 @@
       </div>
       </div>
        <% end %>
->>>>>>> master
     </div>
 
     <!-- Controls -->
@@ -54,7 +33,7 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+  </div><!--end carouselexample-->
 </div><!--end container-->
 
 

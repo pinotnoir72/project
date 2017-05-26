@@ -1,19 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-
-
 <h1>Listing Products</h1>
 
 <div class ="add"><%= link_to 'New Product', new_product_path %></div>
    
-<div class="container-fluid ">
-   <div class="row ">
-   <%= render @products %>
-   </div>   
-</div>    
-
- 
- 
 <div class="container">
   <div class="row">
     <%= render @products %>

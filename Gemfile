@@ -60,3 +60,8 @@ gem 'will_paginate'
 
 #will_paginate for bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
+
+#Use Rspec
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
