@@ -65,3 +65,6 @@ gem 'bootstrap-will_paginate', '0.0.10'
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
+
+# provides the assigns and assert_template functions
+gem 'rails-controller-testing'
