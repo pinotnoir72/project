@@ -61,10 +61,15 @@ gem 'will_paginate'
 #will_paginate for bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
 
-#Use Rspec
+#Use Rspec and #factorygirl
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0" 
 end
 
 # provides the assigns and assert_template functions
 gem 'rails-controller-testing'
+
+#stripe payment
+gem 'stripe'
+
