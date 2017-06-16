@@ -15,14 +15,16 @@ class PaymentsController < ApplicationController
       amount: (@product.price * 100).to_i, # amount in cents, again
       currency: "usd",
       source: token,
-      description: params[:stripeEmail]
+      description: params[:stripeEmail],
+	  receipt_email: params[:stripeEmail]
     )
     
     if charge.paid
       Order.create(
         user_id: @user.id,
         product_id: params[:product_id],
-        total: @product.price)    
+        total: @product.price) 
+        flash[:notice] = "Your payment was processed successfully."
     end
     
   rescue Stripe::CardError => e
