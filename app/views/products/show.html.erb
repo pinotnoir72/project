@@ -40,6 +40,10 @@
       <p>Average Rating:</p>
     </div> 
      
+      
+        <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
     
      
         <%= render 'new_comments' %>
