@@ -7,7 +7,7 @@
       <div class="image">
         <div class="name">
           <h3><%= @product.name %></h3>
-            <%= image_tag(@product.image_url, width: 400) %>
+            <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: "@product.image_url") %>
               <p><%= link_to 'Edit', edit_product_path(@product) %> |
               
                  <%= link_to 'Back', products_path %></p>

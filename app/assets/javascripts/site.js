@@ -6,4 +6,11 @@ $(document).on('turbolinks:load', function(){
         return $(this).attr('data-score');
       }
     });
+    
+    $('.img-zoom').elevateZoom({
+      zoomWindowFadeIn:700,
+			zoomWindowFadeOut: 700,
+			lensFadeIn: 700,
+			lensFadeOut: 700
+  });
 });
