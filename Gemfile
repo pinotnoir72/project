@@ -73,3 +73,6 @@ gem 'rails-controller-testing'
 #stripe payment
 gem 'stripe'
 
+#Redis
+gem 'redis-rails'
+
