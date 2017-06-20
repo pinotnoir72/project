@@ -41,4 +41,7 @@ Rails.application.configure do
   
   #local host https://ruby2-neldahernandez.c9users.io
   config.action_mailer.default_url_options = { :host => 'https://ruby2-neldahernandez.c9users.io' }
+  
+  #tells the rails generator to generate plain JavaScript files instead of CoffeeScript files
+  config.app_generators.javascript_engine = :javascript
 end

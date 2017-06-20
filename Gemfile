@@ -4,7 +4,7 @@ group :production do
   gem 'pg'
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
@@ -14,7 +14,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -44,9 +44,11 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'listen', '~> 3.0.5'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 # Use Devise , Authentication
@@ -56,7 +58,7 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 
 #Use pagination
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.1.0'
 
 #will_paginate for bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
@@ -75,4 +77,7 @@ gem 'stripe'
 
 #Redis
 gem 'redis-rails'
+
+# Use Puma as the app server
+gem 'puma', '~> 3.0'
 

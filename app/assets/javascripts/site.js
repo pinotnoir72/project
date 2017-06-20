@@ -9,7 +9,7 @@ var refreshRating = function() {
 };
 
 
-$(document).on('ready page:load' ajaxSuccess, function(){
+$(document).on('turbolinks:load', function() {
    
     $('.img-zoom').elevateZoom({
       zoomWindowFadeIn:700,
