@@ -82,4 +82,8 @@ Rails.application.configure do
   
   #use dalli
   config.cache_store = :dalli_store
+  
+  # ActionCable setup for Heroku
+  config.web_socket_server_url = "wss://ruby2017e.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://ruby2017.herokuapp.com', 'http://ruby2017.herokuapp.com']
 end
