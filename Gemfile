@@ -85,3 +85,6 @@ gem 'puma', '~> 3.0'
 gem 'dalli'
 
 gem 'memcachier'
+
+#Redis Heroku
+gem 'redis'
