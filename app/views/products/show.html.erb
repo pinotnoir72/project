@@ -30,7 +30,7 @@
     
       <div class="price">
         <strong>Price:</strong>
-          <%= @product.price %>
+          <%= number_to_currency (@product.price) %>
       </div>
     
        <br>
@@ -47,12 +47,8 @@
     
         <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
        
-        <%= render 'new_comments' %>
+        <%= render 'new_comment' %>
         
-        
-     
-  
-  
     </div><!--end row--> 
 </div><!--end container-->   
    

@@ -81,3 +81,7 @@ gem 'redis-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
+#memcachier#ruby
+gem 'dalli'
+
+gem 'memcachier'

@@ -9,12 +9,17 @@ var refreshRating = function() {
 };
 
 
-$(document).on('turbolinks:load', function() {
-   
-    $('.img-zoom').elevateZoom({
-      zoomWindowFadeIn:700,
-			zoomWindowFadeOut: 700,
-			lensFadeIn: 700,
-			lensFadeOut: 700
-  });
+$(document).on('turbolinks:load ajaxSuccess', function(){
+
+/* raty plugin */
+refreshRating();
+
+/* elevate zoom plugin*/
+$('.img-zoom').elevateZoom({
+zoomType: "lens", 
+lensShape: "round", 
+lensSize: 200, 
+lensFadeIn: 400, 
+lensFadeOut: 500
+});
 });

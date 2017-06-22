@@ -55,6 +55,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    dalli (2.7.6)
     debug_inspector (0.0.3)
     devise (4.3.0)
       bcrypt (~> 3.0)
@@ -91,6 +92,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
+    memcachier (0.0.2)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -232,11 +234,13 @@ DEPENDENCIES
   byebug
   cancancan (~> 1.10)
   coffee-rails (~> 4.2.0)
+  dalli
   devise
   factory_girl_rails (~> 4.0)
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
+  memcachier
   pg
   puma (~> 3.0)
   rails (~> 5.0.0)
