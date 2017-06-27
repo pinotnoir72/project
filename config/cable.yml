@@ -6,5 +6,5 @@ test:
  
 production:
   adapter: postgresql
-  url: postgres://mpwertwertzwzyinkk:GPNkY1wKnMasdfasdtrs6jmO8-0BT@ec2-42-123-007-111.compute-1.amazonaws.com:1235/a0s987645usdf6
+  url: postgres://oejudwbemxyubl:c024bad0acc329df81fe5f3ae050b20074f43c63b93068d3b840c89085a1d4e5@ec2-107-20-193-74.compute-1.amazonaws.com:5432/db3iqrsgv2ing3
   channel_prefix: appname_production
