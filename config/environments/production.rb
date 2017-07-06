@@ -81,9 +81,17 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   #use dalli
-  config.cache_store = :dalli_store
-  
-  # ActionCable setup for Heroku
+ config.cache_store = :dalli_store,
+    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+  {:username => ENV["MEMCACHIER_USERNAME"],
+    :password => ENV["MEMCACHIER_PASSWORD"],
+    :failover => true,
+    :socket_timeout => 1.5,
+    :socket_failure_delay => 0.2,
+    :down_retry_delay => 60
+    }
+
+ # ActionCable setup for Heroku
   config.web_socket_server_url = "wss://ruby2017e.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://ruby2017.herokuapp.com', 'http://ruby2017.herokuapp.com']
 end

@@ -17,7 +17,8 @@ Rails.application.routes.draw do
     
     post 'payments/create'
     
-    mount ActionCable.server => '/cable'  
+    # Serve websocket cable requests in-process
+  mount ActionCable.server => '/cable'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
