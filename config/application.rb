@@ -26,5 +26,8 @@ module Workspace
     
     #redis
     config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+    
+    #websocket
+    config.action_cable.mount_path = '/websocket'
   end
 end
