@@ -3,7 +3,7 @@
    
   <div class="panel panel-primary">
      <div class="panel-heading">BLACK FRIDAY DEAL</div>
-     <div class="panel-body"><%= image_tag(product.image_url, class: "img-responsive") %></div>
+     <div class="panel-body"><%= image_tag(product.image_url, class: "img-responsive")unless product.image_url.blank?  %></div>
      <div class="panel-body"><p style="font-family:arial;color:blue;">Name:</p><%= product.name %></div>
      <div class="panel-body"><p style="font-family:arial;color:blue;">Description:</p><%= product.description %></div>
      <div class="panel-body"><p style="font-family:arial;color:blue;">Colour:</p> <%= product.colour %></div>

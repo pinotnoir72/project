@@ -37,9 +37,10 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product=Product.new(product_params)
-
+      ProductChannel.broadcast_to @product.id, comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}), average_rating: @product.average_rating
     respond_to do |format|
       if @product.save
+        
         format.html { redirect_to "/products", notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else

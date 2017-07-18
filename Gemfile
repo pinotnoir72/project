@@ -5,10 +5,8 @@ group :production do
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
-# Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,6 +37,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development do
@@ -63,11 +65,7 @@ gem 'will_paginate', '~> 3.1.0'
 #will_paginate for bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
 
-#Use Rspec and #factorygirl
-group :development, :test do
-  gem 'rspec-rails', '~> 3.5'
-  gem "factory_girl_rails", "~> 4.0" 
-end
+
 
 # provides the assigns and assert_template functions
 gem 'rails-controller-testing'
