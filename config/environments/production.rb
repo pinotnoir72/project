@@ -58,6 +58,7 @@ Rails.application.configure do
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
+   config.log_tags = [ :request_id ]
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
@@ -96,6 +97,10 @@ Rails.application.configure do
     :down_retry_delay => 60
     }
 
+  #Heroku fix for asset pipeline
+    config.assets.compile = true
+    config.assets.digest = true
+    
  # ActionCable setup for Heroku
   config.web_socket_server_url = "wss://ruby2017.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://ruby2017.herokuapp.com', 'http://ruby2017.herokuapp.com']
