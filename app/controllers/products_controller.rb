@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
      @comments = @product.comments.order("created_at ASC").paginate(:page => params[:page], :per_page => 3)
-     @product.viewed!
+    
   end
 
   # GET /products/new
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product=Product.new(product_params)
-      ProductChannel.broadcast_to @product.id, comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}), average_rating: @product.average_rating
+      
    
     respond_to do |format|
       if @product.save
