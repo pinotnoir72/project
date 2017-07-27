@@ -21,6 +21,15 @@ footer {
 li {
   float:right; 
   font-size:1.25em;
+  
+}
+
+.glyphicon-log-in {
+  font-size:1.3em;
+}
+
+.glyphicon-user {
+  font-size:1.3em;
 }
 
 

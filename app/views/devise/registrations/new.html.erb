@@ -4,22 +4,22 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
     
-  <div class="field form-group">
+  <div class="form-group">
     <%= f.label :first_name %><br />
       <%= f.text_field :first_name, autofocus: true, class: 'form-control' %>
   </div><!--end form-group-->  
   
-  <div class="field form-group">
+  <div class="form-group">
     <%= f.label :last_name %><br />
       <%= f.text_field :last_name, autofocus: true, class: 'form-control' %>
   </div><!--end form-group-->  
     
-  <div class="field form-group">
+  <div class="form-group">
     <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true,class:'form-control' %>
   </div><!--end form-group-->    
 
-  <div class="field form-group">
+  <div class="form-group">
     <%= f.label :password %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -27,19 +27,19 @@
       <%= f.password_field :password, autocomplete: "off",class:'form-control' %>
   </div><!--end form-group-->
 
-  <div class="field form-group">
+  <div class="form-group">
     <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off",class:"form-control" %>
   </div><!--end form-group-->
 
-  <div class="field form-group">
+  <div class="form-group">
     <%= f.submit "Sign up",class:"btn btn-primary btn-lg"%>
   </div><!--end form-group-->
     
-  <div class="actions form-group">
+  <div class="actions">
     <%= render "devise/shared/links"%>
       <% end %>
-  </div><!--end action form-group-->
+  </div><!--end action-->
  
 </div><!--end container-->
  
