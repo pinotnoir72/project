@@ -4,11 +4,12 @@
 <div class="container">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
    
+  
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <% @products.each do |product| %>
-       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <% end %>   
+    <% @products.each_with_index do |product, index| %>
+      <li data-target="#MyCarousel" data-slide-to="<%= index %>" class="<%= " active" if product == @products.first %>"></li>
+    <% end %>
   </ol>
     
     

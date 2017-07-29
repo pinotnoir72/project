@@ -4,7 +4,6 @@
 <p><b>Phone: </b>505-698-3651</p>
 <p><b>Email: </b>bike@gmail.com</p>
 
-<h1></h1>
 
 <%= flash[:notice] %>
 
@@ -13,15 +12,15 @@
   <div class="col-md-4">
     <div class="form-group"><!-- Name field -->
       <%= label_tag :name %>
-      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", :required => true%>
     </div>      
     <div class="form-group"><!--Email field -->
       <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", :required => true, :type => "email"%>
     </div>
     <div class="form-group"><!-- Message field -->
       <%= label_tag :message %>
-      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", :required => true%>
     </div>      
   </div>
 </div>
