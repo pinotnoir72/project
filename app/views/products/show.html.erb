@@ -1,8 +1,8 @@
 <p id="notice"><%= notice%></p>
 
-
+<% cache @product do %>
 <div class="container">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-md-12 col-md-offset-0">
       
       <div class="image">
@@ -35,7 +35,7 @@
       </div>
     
        <br>
-       
+<% end %>       
     
     <div class="rated" data-score="<%= @product.average_rating %>"> 
       <p>Average Rating:</p>

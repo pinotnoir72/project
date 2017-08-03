@@ -3,21 +3,15 @@ FactoryGirl.define do
 
   factory :user do
     email
-    password "abcdefgh"
-    password_confirmation { |u| u.password }
-    admin false
+    password "yoiiii"
     first_name "Bob"
-    last_name "Bobson"
+    last_name "Duncan"
+    admin false
   end
 
-  # This will use the User class (Admin would have been guessed)
   factory :admin, class: User do
-    email
-    password "abcdefgh"
-    password_confirmation { |u| u.password }
-    admin true
-    first_name "Admin"
-    last_name "User"
+   email
+   password "hiiiii"
   end
 end
 
