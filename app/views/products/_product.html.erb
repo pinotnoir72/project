@@ -2,18 +2,20 @@
 <div class="col-xs-6 col-md-4">
    
   <div class="panel panel-primary">
-     <div class="panel-heading">BLACK FRIDAY DEAL</div>
-     <div class="panel-body"><%= image_tag(product.image_url, class: "img-responsive")unless product.image_url.blank?  %></div>
+     <div class="panel-heading"><%=link_to "View Deal", product ,:class => "btn btn-warning btn-block" %></div>
      <div class="panel-body"><p style="font-family:arial;color:blue;">Name:</p><%= product.name %></div>
+     <div class="panel-body"><%= image_tag(product.image_url, class: "img-responsive")unless product.image_url.blank?  %></div>
+     <div class="rated" data-score="<%= product.average_rating %>"></div> 
      <div class="panel-body"><p style="font-family:arial;color:blue;">Description:</p><%= product.description %></div>
      <div class="panel-body"><p style="font-family:arial;color:blue;">Colour:</p> <%= product.colour %></div>
-     <div class="panel-body"><p style="font-family:arial;color:blue;">Price:</p> <%= product.price %></div>
-     <div class="panel-footer">Buy bikes and get a gift card</div>
+     <div class="panel-body"><p style="font-family:arial;color:blue;">Price:</p> <%= number_to_currency (product.price) %></div>
+     
+     
      <div class="panel-body">
        <div id ="links">
-        <%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Show', product if admin? %>
+        <%= link_to 'Edit', edit_product_path(product ) if admin?%>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } if admin? %>
        </div><!--end links-->
      </div><!--end panel-body--> 
   </div><!--end panel panel-primary-->   

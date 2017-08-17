@@ -4,4 +4,8 @@ module ProductsHelper
     max_updated_at = Product.maximum(:updated_at).try(:utc).try(:to_s, :number)
     "products/all-#{count}-#{max_updated_at}"
   end
+  
+  def admin?
+    
+  end  
 end

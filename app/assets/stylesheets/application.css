@@ -32,8 +32,18 @@ li {
   font-size:1.3em;
 }
 
+.navbar-nav{
+ padding-top:1em;
+ color:white;
+}
 
+.navbar-inverse {
+  background-color:white;
+}
 
+.nav navbar {
+  color:red;
+}
 
 
 

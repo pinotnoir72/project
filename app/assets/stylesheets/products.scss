@@ -3,9 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-h1 {
-  font-size:6em;
-}
+
 
 td {
   padding-right:30px;    
@@ -38,8 +36,29 @@ th {
 }
 
 
+//=============================
+//products index page styling
+//============================
 
-
-
+.main-heading h1 {
+  font-size:5em;
+}
   
 
+//=============================
+//products helper page styling
+//============================
+
+.panel-heading {
+  background-color: orange!important
+  
+}
+
+.view {
+  font-size:5em;
+}
+
+.img-responsive {
+   width: 100%;
+    height: auto;
+}
