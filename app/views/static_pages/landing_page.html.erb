@@ -1,5 +1,3 @@
-<%= params[:example_key] %>
-<%= params[:example_key].to_i * 10 %>
 
 <div class="container">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -7,7 +5,7 @@
   
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <% @products.each_with_index do |product, index| %>
+    <% @products.each do |product| %>
     <li class="<%= "active" if product == @products.first %>" data-target="#carousel-example-generic" data-slide-to="#{index}" ></li>
     <% end %>
   </ol>
