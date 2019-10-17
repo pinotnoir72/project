@@ -102,6 +102,6 @@ Rails.application.configure do
     config.assets.digest = true
     
  # ActionCable setup for Heroku
-  config.web_socket_server_url = "wss://ruby2017.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://ruby2017.herokuapp.com', 'http://ruby2017.herokuapp.com']
+  config.web_socket_server_url = "wss://secure-sea-43380.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://secure-sea-43380.herokuapp.com', 'http://secure-sea-43380.herokuapp.com']
 end
